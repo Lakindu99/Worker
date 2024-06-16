@@ -1,0 +1,21 @@
+{
+  "name": "construction-backend",
+  "version": "1.0.0",
+  "description": "Backend server for providing construction item details",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "construction",
+    "backend",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
+}
