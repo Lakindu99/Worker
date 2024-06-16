@@ -1,9 +1,7 @@
 package com.example.paidstatapp;
 
-
 import android.os.Bundle;
 import android.util.Log;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,10 +26,10 @@ public class PriceListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_price_list);
-
+        getSupportActionBar().setTitle("Hardware");
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        priceAdapter = new PriceAdapter(priceList);
+        priceAdapter = new PriceAdapter(this, priceList);
         recyclerView.setAdapter(priceAdapter);
 
         fetchPrices();
@@ -39,7 +37,8 @@ public class PriceListActivity extends AppCompatActivity {
 
     private void fetchPrices() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3000/")  // Use 10.0.2.2 to connect to localhost from Android Emulator
+//                .baseUrl("http://10.0.2.2:3000/")  // Use 10.0.2.2 to connect to localhost from Android Emulator
+                .baseUrl("http://192.168.102.132:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

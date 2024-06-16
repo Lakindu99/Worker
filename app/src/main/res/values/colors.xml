@@ -8,4 +8,26 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="btnColor">#8497CE</color>
+
+    <!-- Primary brand color -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryDarkColor">#3700B3</color>
+    <color name="primaryLightColor">#BB86FC</color>
+
+    <!-- Secondary brand color -->
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="secondaryDarkColor">#018786</color>
+    <color name="secondaryLightColor">#67D2CB</color>
+
+    <!-- Text colors -->
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
+    <color name="hintTextColor">#9E9E9E</color>
+
+    <!-- Background colors -->
+    <color name="lightGray">#F5F5F5</color>
+
+    <!-- Button colors -->
+    <color name="buttonColor">#6200EE</color>
+    <color name="buttonTextColor">#FFFFFF</color>
 </resources>

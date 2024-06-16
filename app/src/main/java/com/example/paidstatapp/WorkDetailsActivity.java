@@ -66,7 +66,7 @@ public class WorkDetailsActivity extends AppCompatActivity {
                     try {
 
 
-                        workerClass = new WorkerClass(-1, txtName.getText().toString(), Integer.parseInt(txtPhone.getText().toString()), txtAddress.getText().toString(), mason.isChecked(), carpenter.isChecked(), painter.isChecked());
+                        workerClass = new WorkerClass(-1, capitalize(txtName.getText().toString()), Integer.parseInt(txtPhone.getText().toString()), txtAddress.getText().toString(), mason.isChecked(), carpenter.isChecked(), painter.isChecked());
                         //Toast.makeText(WorkDetailsActivity.this, workerClass.toString(), Toast.LENGTH_LONG).show();
 
 
@@ -104,6 +104,24 @@ public class WorkDetailsActivity extends AppCompatActivity {
                 Toast.makeText(WorkDetailsActivity.this,"Cleared",Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    private String capitalize(String str) {
+        if (str == null || str.length() == 0) {
+            return str;
+        }
+
+        String[] words = str.split(" ");
+        StringBuilder capitalized = new StringBuilder();
+
+        for (String word : words) {
+            if (word.length() > 0) {
+                capitalized.append(Character.toUpperCase(word.charAt(0)))
+                        .append(word.substring(1).toLowerCase())
+                        .append(" ");
+            }
+        }
+
+        return capitalized.toString().trim();
     }
     //when press back button of phone then go to main activity
     @Override

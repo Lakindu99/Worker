@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
         Objects.requireNonNull(getSupportActionBar()).hide();
         AddBtn = findViewById(R.id.addBtn);
         Button priceBtn = findViewById(R.id.priceBtn);

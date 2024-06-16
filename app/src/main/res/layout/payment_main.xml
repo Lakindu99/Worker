@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="15dp"
-        app:cardElevation="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp">
-
+        app:cardElevation="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="12dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
-
-                android:orientation="vertical"
-                android:textAlignment="textStart"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-                app:layout_constraintHorizontal_bias="0.172"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.8">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtDate"
@@ -43,35 +35,19 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:fontFamily="@string/font"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="5dp"
-                    android:text="TextView"
-                    android:textAlignment="textEnd"
+                    android:text="Date"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txtPay"
-                    app:layout_constraintHorizontal_bias="0.254"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.022" />
-
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="28dp"
+                android:layout_weight="1"
                 android:orientation="vertical"
-                android:textAlignment="textEnd"
-                android:paddingLeft="120dp"
-                app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/linearLayout3"
-                app:layout_constraintVertical_bias="0.0">
+                android:gravity="end">
 
                 <TextView
                     android:id="@+id/txtPay"
@@ -79,20 +55,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:fontFamily="@string/font"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="5dp"
-                    android:text="TextView"
-                    android:textAlignment="textEnd"
+                    android:text="Pay"
+                    android:textAlignment="viewEnd"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.647"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.028" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
